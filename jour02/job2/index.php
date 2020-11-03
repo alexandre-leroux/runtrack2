@@ -17,21 +17,21 @@
 
 <?php 
 
-    $nombre = 1;
+    $nombre = 0;
 
-    while ( $nombre < 1337 )
+    while ( $nombre <1338 )
 
     {
         echo $nombre. '<br>' ;
 
-                if ($nombre == 42)
-                {
-                    echo '<b><u>' .$nombre. '</b></u><br>';
-                }
+        if ($nombre == 25) $nombre++;
+        if ($nombre == 36) $nombre++;
+        if ($nombre == 87) $nombre++;
+        if ($nombre == 1110) $nombre++;
+        if ($nombre == 1232) $nombre++;
 
         $nombre++;
     }
-
 
 ?>
 

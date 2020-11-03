@@ -9,7 +9,40 @@
 
 <body>
 
-<?php echo "Hello LaPlateforme!"; ?>
+<?php
+
+    $nb = 0;
+
+    while ( $nb <101)
+
+    {
+        if( ! ($nb % 5) and !($nb % 3 )  )
+        {
+            echo 'BuzzFizzzzzzzz <br>';
+        }
+
+        elseif( ! ($nb % 3) )
+        {
+            echo 'Fizz <br>';
+        }
+
+        elseif( ! ($nb % 5) )
+        {
+            echo 'Buzz <br>';
+        }
+
+        else{
+            echo $nb. '<br>';
+        }
+
+        $nb++;
+     
+    }
+        
+
+
+
+?>
 
 
 
