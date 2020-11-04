@@ -12,23 +12,24 @@
 
 
 
+
 <?php
 
-    $tab = array (200, 204, 173, 98, 171, 404, 459) ;
+$tab = array (200, 204, 173, 98, 171, 404, 459) ;
 
-  
+for ( $i = 0; isset($tab[$i]); $i++  ){}
 
-    $nb = count($tab);
 
-    for ( $i = 0; $i < $nb; $i++)
+
+for ( $e = 0; $e < $i; $e++)
+
+
+
+ if ($tab[$e]%2 == 0)
+    { echo $tab[$e]. ' est paire <br>';}
+else
+    { echo $tab[$e]. ' est impaire <br>';}
     
-
-
-     if ($tab[$i]%2 == 0)
-        { echo $tab[$i]. ' est paire <br>';}
-    else
-        { echo $tab[$i]. ' est impaire <br>';}
-        
 
 ?>
 

@@ -20,7 +20,7 @@
 
     $dico = [
         'consonnes' => 'aeiouy',
-        'voyelles' => 'b', 'c', 'd',
+        'voyelles' => 'bcdfghjklmnpqrstvwxz',
     ];
 
     echo $dico['consonnes'];
