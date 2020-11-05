@@ -14,48 +14,37 @@
 
 <?php
 
-    $str =' "On n est pas le meilleur quand on le croit mais quand on le sait”.';
+$str = "On n est pas le meilleur quand on le croit mais quand on le sait";
 
-    $tab = str_split($str, 1);
+$dic = array (
+    'voyelles' => "aeiouyO",
+    'consonnes' => "bcdfghjklmnpqrstvwxz")
+;
 
-    $dico = [
-        'consonnes' => 'aeiouy',
-        'voyelles' => 'bcdfghjklmnpqrstvwxz',
-    ];
+$nbvoyelles = 0;
+$nbconsonnes = 0;
 
-    echo $dico['consonnes'];
-  
-?>
+for ($i=0; isset($str[$i]) ; $i++) {
 
-
-
-<br><br><br><br><br><br><br><br><br><br>
-
-
-<?php
-    $variables = [
-        ['type' => 'int', 'contenu' => 'entier', 'valeur' => '12'],
-        ['type' => 'float', 'contenu' => 'nombre dec.', 'valeur' => '12.9'],
-        ['type' => 'string', 'contenu' => 'texte', 'valeur' => 'hello world!'],
-    ];
-
-
-    foreach($variables as $cle => $details)
-    
-        {
-        foreach ($details as $c => $v){
-            echo $c. ' : ' .$v. '<br>';
+    for ($x=0; isset($dic['voyelles'][$x]) ; $x++) {
+        if ( $str[$i] == $dic['voyelles'][$x] ) 
+            $nbvoyelles++;
         }
-        echo '<br>';
     }
 
-    echo '<pre>';
-    print_r($variables);
-    var_dump($variables);
-    echo '</pre>';
+echo "$nbvoyelles"."<br />";
+
+for ($i=0; isset($str[$i]) ; $i++) {
+
+    for ($y=0; isset($dic['consonnes'][$y]) ; $y++) {
+        if ( $str[$i] == $dic['consonnes'][$y] ) 
+            $nbconsonnes++;
+        }
+}
+
+echo "$nbconsonnes" . "<br />";
+
 ?>
-
-
 
 
 </body>
