@@ -9,23 +9,35 @@
 
 <body>
 
+
+
+
+<table>
+
+        <tr>
+                <td>Arguments </td>
+                <td>Valeurs</td>
+        </tr>
+
+        <br>
+
 <?php
 
-
-
-    var_dump ($_POST);
-
-
-    $x=0;
     
-    foreach ( $_POST as $_POST[$x] ) {   $x++;    }
-    
-    echo $x;
+    foreach ( $_POST as $key => $value ) {   
+
+        echo   '<tr><td>' . $key. ' : '  .$value. '</td></tr>';
+
+        }
     
 ?>
 
 
 
+
+</table>
+
+<br>
 
 
 <form method="post" action="index.php">
