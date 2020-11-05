@@ -10,23 +10,34 @@
 <body>
 
 
+<?php
+
+       foreach ($_GET   as  $key => $value)
+
+       if (is_numeric($value)) {
+               
+                 if ($value%2 == 0){echo 'pair';}
+        
+                  elseif ($value%2 == 1){echo 'impair';} }
+        
+        
+       else echo ' votre saisie ne contient pas que des chiffres';
+?>
+
+
+
 
 
 
 <?php
 
-        if( empty($_POST["username"]) AND empty($_POST["password"]) ) {}
+//        foreach ($_GET   as  $key => $value)
 
-    
-        elseif ( $_POST["username"]  == 'John' AND $_POST["password"] == 'Rambo' ) {   
-
-        echo   ' c\'est pas ma guerre' ;
-
-        }
-
-        else echo 'Votre pire cauchemard';
-    
-?>
+//        if ($value%2 == 0){echo 'pair';}
+       
+//        elseif ($value%2 == 1){echo 'impair';}
+//        else echo ' votre saisie ne contient pas que des chiffres';
+?> 
 
 
 
@@ -36,19 +47,14 @@
 <br>
 
 
-<form method="post" action="index.php">
+<form method="get" action="index.php">
 
 
-    <label for="username">username</label>
-    <input type="username" name="username" id="username" />
 
-            <br />
 
-    <label for="password">password :</label>
-    <input type="password" name="password" id="password" />
 
-            <br />
-
+        <textarea name="nombre" id="nombre" rows="10" cols="50"></textarea>
+        
 
     <input type="submit" value="Envoyer" />
 
