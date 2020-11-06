@@ -10,20 +10,36 @@
 <body>
 
 
+
+
+
+
 <?php
 
+$a = 5;
+$operation = "mul";
+$b = 2;
 
 
-function gethello()
+function calcule($a, $b, $operation)
 {
-    $str = 'Hello LaPlateforme!';
-    return ($str);
+   
+    if ($operation == "add")
+        return ($a + $b);
+    else if ($operation == "mul")
+        return ($a * $b);
+    else if ($operation == "div")
+        return ($a / $b);
+ 
+
 }
 
-echo gethello();
+echo calcule($a, $b, $operation)
+
+
+
 
 ?>
-
 
 
 
