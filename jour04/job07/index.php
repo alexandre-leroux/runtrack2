@@ -9,23 +9,55 @@
 
 <body>
 
+<form method="post" action="index.php">
+
+
+    <label for="largeur">largeur :</label>
+    <input type="largeur" name="largeur" id="largeur" />
+
+            <br />
+
+    <label for="hauteur">hauteur :</label>
+    <input type="hauteur" name="hauteur" id="hauteur" />
+
+            <br />
+
+
+    <input type="submit" value="Envoyer" />
+
+    <br /><br />
+
+
+</form>
+
 
 
 
 
 <?php
 
-        if( empty($_POST["username"]) AND empty($_POST["password"]) ) {}
+        var_dump($_POST);
 
+        echo '<br><br>';
+
+       
+        $largeur = $_POST["largeur"];
+        $hauteur = $_POST["hauteur"];
     
-        elseif ( $_POST["username"]  == 'John' AND $_POST["password"] == 'Rambo' ) {   
+        echo str_repeat(' /____________\ <br>' , $largeur) ;
+        echo '<br>';
+        echo str_repeat('_' , $hauteur) ;
 
-        echo   ' c\'est pas ma guerre' ;
+        // while (  $_POST["largeur"] < $a  )  { echo str_repeat('_' , $a) ;}
 
-        }
+        // if( isset( $_POST["largeur"]) == 1) { echo str_repeat('_' , $a) ;  echo '<br>'; echo str_repeat('_' , $a)          ; }
 
-        else echo 'Votre pire cauchemard';
+        // else echo '';
     
+     
+        foreach ($_POST as $key => $value);
+        
+
 ?>
 
 
@@ -35,25 +67,6 @@
 
 <br>
 
-
-<form method="post" action="index.php">
-
-
-    <label for="username">username</label>
-    <input type="username" name="username" id="username" />
-
-            <br />
-
-    <label for="password">password :</label>
-    <input type="password" name="password" id="password" />
-
-            <br />
-
-
-    <input type="submit" value="Envoyer" />
-
-
-</form>
 
 
 
