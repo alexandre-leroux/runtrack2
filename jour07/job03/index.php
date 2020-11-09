@@ -26,7 +26,7 @@ session_start();
 <form action="index.php" method='post'>
 
 
-                <input type="text" name='prénom' placeholder=prénom >       
+                <input type="text" name='prenom' placeholder=prénom >       
                 <input type="submit" name="submit">
                 <input name = "reset" type="submit" value="reset">
 
@@ -36,9 +36,25 @@ session_start();
 
 <?php
 
-$i=0;
-while ( $_SESSION[$i]==true) {$i++;}
-if ( $_POST['prénom'] == true) {  $_SESSION[$i] =  $_POST['prénom'] ;}
+
+
+// $_SESSION[] = 'test';
+// $_SESSION[] = 'test 1';
+// $_SESSION[] = 'test 2';
+
+if (isset($_POST["prenom"])){    $_SESSION["prenom"][] = $_POST["prenom"];
+ }
+ if (isset($_POST["reset"])){         session_destroy();
+ }
+ if (isset($_SESSION["prenom"][0])){
+         var_dump($_SESSION);
+ }
+
+
+
+// $i=0;
+// while ( $_SESSION[$i]==true) {$i++;}
+// if ( $_POST['prénom'] == true) {  $_SESSION[$i] =  $_POST['prénom'] ;}
 
 
 
@@ -50,11 +66,11 @@ if ( $_POST['prénom'] == true) {  $_SESSION[$i] =  $_POST['prénom'] ;}
 //     $_SESSION[] = $_POST['prénom']
 
 // }
-echo $_SESSION;
+// echo $_SESSION;
 
 
 
-var_dump($_SESSION);
+
 ?>
 
 
