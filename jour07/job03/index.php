@@ -26,7 +26,7 @@ session_start();
 <form action="index.php" method='post'>
 
 
-                <input type="text" name='prénom' placeholder=prénom >       
+                <input type="text" name='prenom' placeholder=prénom >       
                 <input type="submit" name="submit">
                 <input name = "reset" type="submit" value="reset">
 
@@ -36,33 +36,39 @@ session_start();
 
 <?php
 
-// $i=0;
-// while ( $_SESSION[$i]==true) {$i++;}
-// if ( $_POST['prénom'] == true) {  $_SESSION[$i] =  $_POST['prénom'] ;}
-
-array_push( $_SESSION, $_POST['prénom'] );
-
-
-// if ( @$_POST['prénom'] == true ) {$prenom = $_POST['prénom'] ; }
-
-// elseif ( @$_POST['reset'] == true ) { session_destroy() ; exit; }
-// for ( $i=0 ; isset($_SESSION[$i]) ; $i++ ) {
-
-//     $_SESSION[] = $_POST['prénom']
-
-// }
-echo $_SESSION;
+if (isset($_POST["reset"]))  {  session_destroy(); exit; }
 
 
 
-var_dump($_SESSION);
+
+
+if (isset($_POST["prenom"]))     { $_SESSION["prenom"][] = $_POST["prenom"];
+ }
+
+ @$prenoms = $_SESSION["prenom"];
+
+
+
+
+
+ if (isset($_POST["prenom"])) {
+
+ foreach ( $prenoms as $key => $value){
+    echo $value. ' <br>';
+}
+ }
+
+
+
+
+
 ?>
 
 
 
 <pre>
 <?php
-var_dump($_SESSION) ;
+// var_dump($_SESSION) ;
 ?>
 </pre>
 
