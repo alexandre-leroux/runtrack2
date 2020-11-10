@@ -36,10 +36,11 @@ session_start();
 
 <?php
 
-$i=0;
-while ( $_SESSION[$i]==true) {$i++;}
-if ( $_POST['prénom'] == true) {  $_SESSION[$i] =  $_POST['prénom'] ;}
+// $i=0;
+// while ( $_SESSION[$i]==true) {$i++;}
+// if ( $_POST['prénom'] == true) {  $_SESSION[$i] =  $_POST['prénom'] ;}
 
+array_push( $_SESSION, $_POST['prénom'] );
 
 
 // if ( @$_POST['prénom'] == true ) {$prenom = $_POST['prénom'] ; }
