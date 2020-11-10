@@ -68,7 +68,7 @@ if (isset($_POST["prenom"]))     { $_SESSION["prenom"][] = $_POST["prenom"];
 
 <pre>
 <?php
-// var_dump($_SESSION) ;
+var_dump($_SESSION) ;
 ?>
 </pre>
 
