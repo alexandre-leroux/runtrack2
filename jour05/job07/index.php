@@ -84,6 +84,8 @@ function cesar( $f, $i )
 
  $test = str_split($i);
 
+
+
  for ( $ee=0 ; isset($test[$ee]) ; $ee++) 
  
                 {  
