@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap');
+
+body {
+
+    background-color: rgb(153, 111, 150);
+}
+
+
+#formstyle3 select{
+    font-family: 'Goldman', cursive;
+    height: 10vh;
+    width: 300px;
+}
+
+#inputstyle3{
+    font-family: 'Goldman', cursive;
+    height: 10vh;
+    width: 300px;
+}
