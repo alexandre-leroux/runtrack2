@@ -23,68 +23,59 @@ $db = mysqli_connect( "localhost", "root", "root", "jour08");
 
 $requete = "SELECT *FROM etudiants;";
 
-
-
 $query = mysqli_query($db, $requete);
 
-// while (($resultat = mysqli_fetch_assoc($query)) !=null){
-//     var_dump($resultat) ;
-//     echo 'tour';
-// }
 $resultat = mysqli_fetch_assoc($query);
 
-
-
-foreach ( $resultat as $key => $value){
-    echo $key." "; 
-}
-
-echo "<br />";
-
-while (  ( $resultat = mysqli_fetch_assoc($query) )  != null)
-{
-    foreach ( $resultat as $key => $value){
-         echo $value." "; 
-    }
-    echo "<br />";
-}
-
-// foreach ( $resultat as $key => $value){
-//     echo $key; echo $value;
-// }
-// $resultat = mysqli_fetch_assoc($query);
-
-
-// foreach ( $resultat as $key => $value){
-//     echo $key; echo $value;
-// }
-
-// foreach ( $resultat as $result){
-//     echo $result[1]."<br>";
-
-
-
 mysqli_close($db);
+
 
 ?>
 
 
 
+<table>
+
+
+    <thead>
+        <tr>
+            <?php             
+                    foreach ( $resultat as $key => $value)
+                    
+                    {
+                        echo '<th>' .$key.'</th>'; 
+                        
+                    }
+            ?>
+        </tr>
+    </thead>
+
+
+    <tbody>
+            <?php             
+
+                    while (  ( $resultat = mysqli_fetch_assoc($query) )  != NULL)
+
+                    {
+
+                        echo '<tr>';  
+                        
+                        foreach ( $resultat as $key => $value){
+                            echo '<td>' .$value.'</td>'; 
+                                }  
+                        
+                        '<tr/>';
+                    }
+
+            ?>
+    </tbody>
+
+
+</table>
 
 
 
 
-
-
-
-
-
-
-<!-- <pre>
-    <?php
-    // var_dump($resultat);
-    ?>
-</pre> -->
 
 </body>
 
