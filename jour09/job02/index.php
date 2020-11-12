@@ -21,21 +21,16 @@
 
 $db = mysqli_connect( "localhost", "root", "root", "jour08");
 
-$requete = "SELECT *FROM etudiants;";
+$requete = "SELECT salles.nom, salles.capacite  FROM salles;";
 
 $query = mysqli_query($db, $requete);
 
-$resultat = mysqli_fetch_assoc($query);
+
 
 mysqli_close($db);
-
-
-
-
+$resultat = mysqli_fetch_assoc($query)
 
 ?>
-
-
 
 
 
@@ -45,11 +40,10 @@ mysqli_close($db);
     <thead>
         <tr>
             <?php             
-                    foreach ( $resultat as $key => $value)
+                    foreach (  $resultat  as $key => $value)
                     
                     {
                         echo '<th>' .$key.'</th>'; 
-
                         
                     }
             ?>
@@ -58,15 +52,18 @@ mysqli_close($db);
 
 
     <tbody>
-            <?php            
+            <?php             
+
                     echo '<tr>';
-                    foreach ( $resultat as $key => $value)
-                    
+                    foreach (  $resultat  as $key => $value)
+                                        
                     {
                         echo '<td>' .$value.'</td>'; 
-
+    
                     }
                     echo '<tr/>';
+                    
+
 
 
 
